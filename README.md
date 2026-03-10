@@ -34,15 +34,51 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-/* write all the steps invloved */
-
+/* 1.Create a new project in Quartus II and open a Block Diagram/Schematic file.
+2.Place logic symbols and connect inputs A, B, Cin and outputs Sum, Cout.
+3.Implement logic: Sum = A ⊕ B ⊕ Cin, Cout = AB + Cin(A ⊕ B).
+4.Compile and simulate to verify the output waveform
+*/
 **PROGRAM**
+module jk(
+input clk,
+input j,
+input k,
+output reg q,
+output reg qbar
+);
+
+always @(posedge clk) begin
+if (j == 0 && k == 0) begin
+    q <= q;
+    qbar <= qbar;
+end 
+else if (j == 0 && k == 1) begin
+    q <= 0;
+    qbar <= 1;
+end 
+else if (j == 1 && k == 0) begin
+    q <= 1;
+    qbar <= 0;
+end 
+else if (j == 1 && k == 1) begin
+    q <= ~q;
+    qbar <= ~qbar;
+end
+end
+
+endmodule
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
+<img width="1920" height="1080" alt="Screenshot 2026-03-10 201640" src="https://github.com/user-attachments/assets/5968eb9e-df6c-46e9-88b5-459bb42593b6" />
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+<img width="1920" height="1080" alt="Screenshot 2026-03-10 202003" src="https://github.com/user-attachments/assets/e70e63cf-ad2f-4441-88cd-ef131bf78505" />
+
 
 **RESULTS**
+Thus the given program is Verified
