@@ -40,6 +40,7 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 4.Compile and simulate to verify the output waveform
 */
 **PROGRAM**
+```
 module jk(
 input clk,
 input j,
@@ -68,8 +69,10 @@ end
 end
 
 endmodule
+```
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by:NEERAJA MADASAMY
+RegisterNumber:212225240099
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
